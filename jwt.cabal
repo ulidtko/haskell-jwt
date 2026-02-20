@@ -96,7 +96,7 @@ test-suite testsuite
                      , memory
                      , bytestring               >= 0.10
                      , text                     >= 0.11
-                     , aeson
+                     , aeson                    >= 2
                      , scientific               >= 0.2
                      , containers
                      , unordered-containers
