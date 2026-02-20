@@ -565,7 +565,8 @@ instance ToJSON JWTClaimsSet where
                 , fmap ("nbf" .=) nbf
                 , fmap ("iat" .=) iat
                 , fmap ("jti" .=) jti
-            ] ++ map (first Key.fromText) (Map.toList $ unClaimsMap $ removeRegisteredClaims unregisteredClaims)
+            ] ++ map (first Key.fromText)
+                     (Map.toList $ unClaimsMap $ removeRegisteredClaims unregisteredClaims)
     -- See [NOTE] Encoding VS Value, and json objects keys ordering
     toEncoding JWTClaimsSet{..} = pairs . mconcat $ catMaybes [
                   fmap ("iss" .=) iss
