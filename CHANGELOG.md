@@ -1,3 +1,7 @@
+# Unreleased 0.12.0
+
+* Pull updates in cryptostore, fixing build with crypton.
+
 # 2021-12-11 0.11.0
 
 * Added support for RSA256 Public Key verification. This in turn means that some 
